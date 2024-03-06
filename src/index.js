@@ -6,9 +6,10 @@ import { Book } from "./Books";
 function BookList(){
       
     return <>
-        <section className="BookList">
-        {book.map(({img, title, author,id}) => {
-          return <Book img={img} title={title} author={author} key={id}/>
+       <h1 className="heading">amazon best sellers</h1>
+        <section className="booklist">
+        {book.map((book, index) => {
+          return <Book {...book} key={book.id} number={index}/>
         })}
         
         </section>
